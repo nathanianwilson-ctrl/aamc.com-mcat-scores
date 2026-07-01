@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Testing Services Mock Dashboard</title>
+  <style>
+    body { margin:0; font-family: Arial, sans-serif; background:#f3f3f3; }
+    .top { background:#003b67; color:white; height:42px; display:flex; justify-content:flex-end; align-items:center; padding:0 60px; gap:30px; }
+    .nav { background:#00508f; color:white; height:95px; display:flex; align-items:center; padding:0 55px; }
+    .logo { font-size:36px; font-weight:bold; margin-right:25px; }
+    .tabs { margin-left:auto; height:100%; display:flex; }
+    .tab { padding:35px 25px; font-weight:bold; }
+    .active { background:white; color:#00706b; }
+    .container { max-width:1600px; margin:60px auto; }
+    h1 { font-size:38px; margin-bottom:15px; }
+    .subtitle { font-size:20px; margin-bottom:20px; }
+    .grid { display:grid; grid-template-columns:1fr 1fr; gap:30px; }
+    .card { background:white; border-radius:5px; padding:32px; box-shadow:0 1px 4px #aaa; min-height:340px; }
+    .card h2 { font-size:32px; margin-top:0; }
+    .info-row { display:grid; grid-template-columns:200px 1fr; font-size:20px; margin:15px 0; }
+    .label { font-weight:bold; }
+    .exam-box { border:1px solid #ccc; border-radius:5px; overflow:hidden; margin-top:20px; }
+    .exam-head { background:#a8c4e1; padding:25px 35px; font-size:24px; font-weight:bold; }
+    .exam-body { padding:25px 35px; }
+    .exam-row { display:grid; grid-template-columns:220px 1fr; font-size:20px; margin:15px 0; }
+    .green { color:#216b2f; }
+    .actions { display:flex; justify-content:flex-end; align-items:center; gap:25px; margin-top:35px; }
+    .link { color:#00706b; font-weight:bold; }
+    button { border:2px solid #00706b; color:#00706b; background:white; padding:14px 28px; font-size:18px; border-radius:5px; font-weight:bold; }
+    .contact { margin-top:30px; }
+    .disclaimer { margin-top:20px; color:#666; font-size:14px; }
+  </style>
+</head>
+<body>
+  <div class="top">
+    <div>Visit Example.org</div>
+    <div>🔔</div>
+    <div>00000000</div>
+    <div>NW</div>
+  </div>
+
+  <div class="nav">
+    <div class="logo">★ MOCK</div>
+    <div>Testing Services</div>
+    <div class="tabs">
+      <div class="tab active">Dashboard</div>
+      <div class="tab">My Scores ▾</div>
+    </div>
+  </div>
+
+  <div class="container">
+    <h1>Testing Services Score Reporting System</h1>
+    <div class="subtitle">Welcome to your hub for viewing and managing access to your exam scores.</div>
+
+    <div class="grid">
+      <div class="card">
+        <h2>Personal Information</h2>
+        <p>To edit the information below, go to <span class="link">My Account</span>.</p>
+
+        <div class="info-row"><div class="label">Name</div><div>Student Name</div></div>
+        <div class="info-row"><div class="label">ID</div><div>00000000</div></div>
+        <div class="info-row"><div class="label">Date of Birth</div><div>Jan 1, 2000</div></div>
+        <div class="info-row"><div class="label">Gender</div><div>—</div></div>
+      </div>
+
+      <div class="card">
+        <h2>Most Recent Exam</h2>
+        <div class="exam-box">
+          <div class="exam-head">MCAT</div>
+          <div class="exam-body">
+            <div class="exam-row"><div class="label">Exam Date</div><div>May 08, 2026</div></div>
+            <div class="exam-row"><div class="label">Score Release Date</div><div>June 15, 2026</div></div>
+            <div class="exam-row"><div class="label">Score Status</div><div class="green">Score Available</div></div>
+
+            <div class="actions">
+              <div class="link">Share Scores</div>
+              <button>View Recent Score</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="card contact">
+      <h2>Contact Us</h2>
+    </div>
+
+    <div class="disclaimer">
+      Mock educational UI only. Not affiliated with AAMC or any official testing service.
+    </div>
+  </div>
+</body>
+</html>

@@ -3,44 +3,63 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Testing Dashboard Mockup</title>
+  <title>School Project Score Dashboard Mockup</title>
+
   <style>
+    * {
+      box-sizing: border-box;
+    }
+
     body {
       margin: 0;
       font-family: Arial, Helvetica, sans-serif;
-      background: #f2f2f2;
+      background: #f3f3f3;
       color: #111;
     }
 
     .topbar {
-      background: #003b67;
-      color: white;
       height: 58px;
+      background: #073b66;
+      color: white;
+      display: flex;
+      justify-content: flex-end;
+      align-items: center;
+      padding: 0 58px;
+      gap: 25px;
+      font-size: 15px;
+      font-weight: 600;
+    }
+
+    .circle {
+      width: 38px;
+      height: 38px;
+      border: 2px solid white;
+      border-radius: 50%;
       display: flex;
       align-items: center;
-      justify-content: flex-end;
-      padding: 0 58px;
-      gap: 22px;
-      font-size: 15px;
+      justify-content: center;
+      font-weight: 700;
     }
 
     .navbar {
-      background: #00518c;
-      height: 92px;
+      height: 96px;
+      background: #07548d;
+      color: white;
       display: flex;
       align-items: center;
-      padding: 0 45px;
-      color: white;
+      padding-left: 46px;
     }
 
     .brand {
-      font-size: 34px;
-      font-weight: 800;
-      margin-right: 25px;
+      font-size: 35px;
+      font-weight: 900;
+      letter-spacing: -1px;
+      margin-right: 28px;
     }
 
     .service {
       font-weight: 700;
+      font-size: 16px;
     }
 
     .tabs {
@@ -50,26 +69,29 @@
     }
 
     .tab {
+      height: 100%;
+      padding: 0 28px;
       display: flex;
       align-items: center;
-      padding: 0 24px;
-      font-weight: 700;
+      font-weight: 800;
+      font-size: 16px;
     }
 
     .tab.active {
       background: white;
-      color: #00706b;
+      color: #00736f;
     }
 
     .container {
-      max-width: 1320px;
+      max-width: 1280px;
       margin: 55px auto;
       padding: 0 20px;
     }
 
     h1 {
       font-size: 32px;
-      margin-bottom: 12px;
+      margin: 0 0 12px;
+      font-weight: 850;
     }
 
     .subtitle {
@@ -86,44 +108,45 @@
     .card {
       background: white;
       border-radius: 5px;
+      box-shadow: 0 1px 5px rgba(0,0,0,0.25);
       padding: 28px;
-      box-shadow: 0 1px 4px rgba(0,0,0,0.25);
-      min-height: 270px;
+      min-height: 290px;
     }
 
     h2 {
       font-size: 27px;
-      margin-top: 0;
-      margin-bottom: 25px;
+      margin: 0 0 26px;
+      font-weight: 850;
     }
 
     a {
-      color: #00706b;
+      color: #00736f;
       text-decoration: underline;
+      font-weight: 500;
     }
 
     .info-row {
       display: grid;
-      grid-template-columns: 180px 1fr;
-      font-size: 17px;
+      grid-template-columns: 185px 1fr;
       margin: 14px 0;
+      font-size: 17px;
     }
 
     .label {
-      font-weight: 800;
+      font-weight: 850;
     }
 
     .exam-box {
-      border: 1px solid #d3d3d3;
+      border: 1px solid #d1d1d1;
       border-radius: 4px;
       overflow: hidden;
     }
 
     .exam-head {
-      background: #a8c4e1;
+      background: #a9c6e3;
       padding: 22px 30px;
       font-size: 21px;
-      font-weight: 800;
+      font-weight: 850;
     }
 
     .exam-body {
@@ -132,9 +155,9 @@
 
     .exam-row {
       display: grid;
-      grid-template-columns: 190px 1fr;
-      font-size: 16px;
+      grid-template-columns: 200px 1fr;
       margin: 14px 0;
+      font-size: 16px;
     }
 
     .green {
@@ -146,42 +169,46 @@
       justify-content: flex-end;
       align-items: center;
       gap: 24px;
-      margin-top: 32px;
+      margin-top: 34px;
     }
 
     .action-link {
-      color: #00706b;
-      font-weight: 800;
+      color: #00736f;
+      font-weight: 850;
       text-decoration: none;
     }
 
     button {
-      border: 2px solid #00706b;
-      color: #00706b;
+      border: 2px solid #00736f;
       background: white;
-      padding: 13px 24px;
-      font-size: 16px;
+      color: #00736f;
+      padding: 13px 25px;
       border-radius: 5px;
-      font-weight: 800;
+      font-weight: 850;
+      font-size: 16px;
       cursor: pointer;
+    }
+
+    button:hover {
+      background: #f0fbfa;
     }
 
     .contact {
       margin-top: 28px;
-      min-height: 180px;
+      min-height: 190px;
     }
 
     .blue-strip {
-      background: #a8c4e1;
-      padding: 22px 30px;
+      background: #a9c6e3;
+      padding: 22px 28px;
       font-size: 20px;
-      font-weight: 800;
+      font-weight: 850;
       margin-top: 18px;
       border-radius: 3px;
     }
 
     .disclaimer {
-      margin-top: 20px;
+      margin-top: 18px;
       font-size: 13px;
       color: #666;
     }
@@ -193,25 +220,36 @@
 
       .topbar {
         padding: 0 20px;
+        gap: 14px;
+        font-size: 13px;
       }
 
       .navbar {
-        padding: 0 20px;
+        padding-left: 20px;
+      }
+
+      .brand {
+        font-size: 28px;
+      }
+
+      .tab {
+        padding: 0 15px;
       }
     }
   </style>
 </head>
+
 <body>
 
   <div class="topbar">
-   <div>aamc.com-mcat-scores</div>
+    <div>aamc.com-mcat-scores</div>
     <div>🔔</div>
     <div>Nathan Wilson<br>16698210</div>
-    <div>NW</div>
+    <div class="circle">NW</div>
   </div>
 
   <div class="navbar">
-    <div class="brand">AAMC</div>
+    <div class="brand">AAMC Mock</div>
     <div class="service">Testing Services</div>
 
     <div class="tabs">
@@ -220,14 +258,16 @@
     </div>
   </div>
 
-  <div class="container">
+  <main class="container">
+
     <h1>Testing Dashboard</h1>
     <div class="subtitle">
       Welcome to your exam score portal.
     </div>
 
     <div class="grid">
-      <div class="card">
+
+      <section class="card">
         <h2>Personal Information</h2>
 
         <p>
@@ -254,9 +294,9 @@
           <div class="label">Gender</div>
           <div>Man</div>
         </div>
-      </div>
+      </section>
 
-      <div class="card">
+      <section class="card">
         <h2>Latest Exam</h2>
 
         <div class="exam-box">
@@ -287,18 +327,20 @@
             </div>
           </div>
         </div>
-      </div>
+      </section>
+
     </div>
 
-    <div class="card contact">
+    <section class="card contact">
       <h2>Contact Us</h2>
       <div class="blue-strip">MCAT</div>
-    </div>
+    </section>
 
     <div class="disclaimer">
-      Mock educational page only. Not affiliated with or endorsed by any official testing organization.
+      School project mockup only. Not affiliated with or endorsed by AAMC or any official testing organization.
     </div>
-  </div>
+
+  </main>
 
 </body>
 </html>

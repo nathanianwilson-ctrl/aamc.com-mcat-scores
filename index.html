@@ -1,28 +1,304 @@
-<div class="card">
-    <h2>Personal Information</h2>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Testing Dashboard Mockup</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, Helvetica, sans-serif;
+      background: #f2f2f2;
+      color: #111;
+    }
 
-    <p>
-        To edit the information below, go to
-        <a href="#" style="color:#00706b;text-decoration:underline;">My Account</a>.
-    </p>
+    .topbar {
+      background: #003b67;
+      color: white;
+      height: 58px;
+      display: flex;
+      align-items: center;
+      justify-content: flex-end;
+      padding: 0 58px;
+      gap: 22px;
+      font-size: 15px;
+    }
 
-    <div class="info-row">
-        <div class="label">Name</div>
-        <div>Nathan Ian Wilson</div>
+    .navbar {
+      background: #00518c;
+      height: 92px;
+      display: flex;
+      align-items: center;
+      padding: 0 45px;
+      color: white;
+    }
+
+    .brand {
+      font-size: 34px;
+      font-weight: 800;
+      margin-right: 25px;
+    }
+
+    .service {
+      font-weight: 700;
+    }
+
+    .tabs {
+      margin-left: auto;
+      height: 100%;
+      display: flex;
+    }
+
+    .tab {
+      display: flex;
+      align-items: center;
+      padding: 0 24px;
+      font-weight: 700;
+    }
+
+    .tab.active {
+      background: white;
+      color: #00706b;
+    }
+
+    .container {
+      max-width: 1320px;
+      margin: 55px auto;
+      padding: 0 20px;
+    }
+
+    h1 {
+      font-size: 32px;
+      margin-bottom: 12px;
+    }
+
+    .subtitle {
+      font-size: 17px;
+      margin-bottom: 18px;
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 28px;
+    }
+
+    .card {
+      background: white;
+      border-radius: 5px;
+      padding: 28px;
+      box-shadow: 0 1px 4px rgba(0,0,0,0.25);
+      min-height: 270px;
+    }
+
+    h2 {
+      font-size: 27px;
+      margin-top: 0;
+      margin-bottom: 25px;
+    }
+
+    a {
+      color: #00706b;
+      text-decoration: underline;
+    }
+
+    .info-row {
+      display: grid;
+      grid-template-columns: 180px 1fr;
+      font-size: 17px;
+      margin: 14px 0;
+    }
+
+    .label {
+      font-weight: 800;
+    }
+
+    .exam-box {
+      border: 1px solid #d3d3d3;
+      border-radius: 4px;
+      overflow: hidden;
+    }
+
+    .exam-head {
+      background: #a8c4e1;
+      padding: 22px 30px;
+      font-size: 21px;
+      font-weight: 800;
+    }
+
+    .exam-body {
+      padding: 20px 30px;
+    }
+
+    .exam-row {
+      display: grid;
+      grid-template-columns: 190px 1fr;
+      font-size: 16px;
+      margin: 14px 0;
+    }
+
+    .green {
+      color: #1f6b31;
+    }
+
+    .actions {
+      display: flex;
+      justify-content: flex-end;
+      align-items: center;
+      gap: 24px;
+      margin-top: 32px;
+    }
+
+    .action-link {
+      color: #00706b;
+      font-weight: 800;
+      text-decoration: none;
+    }
+
+    button {
+      border: 2px solid #00706b;
+      color: #00706b;
+      background: white;
+      padding: 13px 24px;
+      font-size: 16px;
+      border-radius: 5px;
+      font-weight: 800;
+      cursor: pointer;
+    }
+
+    .contact {
+      margin-top: 28px;
+      min-height: 180px;
+    }
+
+    .blue-strip {
+      background: #a8c4e1;
+      padding: 22px 30px;
+      font-size: 20px;
+      font-weight: 800;
+      margin-top: 18px;
+      border-radius: 3px;
+    }
+
+    .disclaimer {
+      margin-top: 20px;
+      font-size: 13px;
+      color: #666;
+    }
+
+    @media (max-width: 850px) {
+      .grid {
+        grid-template-columns: 1fr;
+      }
+
+      .topbar {
+        padding: 0 20px;
+      }
+
+      .navbar {
+        padding: 0 20px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="topbar">
+    <div>Visit Example.org</div>
+    <div>🔔</div>
+    <div>Nathan Wilson<br>16698210</div>
+    <div>NW</div>
+  </div>
+
+  <div class="navbar">
+    <div class="brand">TEST</div>
+    <div class="service">Testing Services</div>
+
+    <div class="tabs">
+      <div class="tab active">Dashboard</div>
+      <div class="tab">My Scores ▾</div>
+    </div>
+  </div>
+
+  <div class="container">
+    <h1>Testing Dashboard</h1>
+    <div class="subtitle">
+      Welcome to your exam score portal.
     </div>
 
-    <div class="info-row">
-        <div class="label">AAMC ID</div>
-        <div>16698210</div>
+    <div class="grid">
+      <div class="card">
+        <h2>Personal Information</h2>
+
+        <p>
+          To edit the information below, go to
+          <a href="#">My Account</a>.
+        </p>
+
+        <div class="info-row">
+          <div class="label">Name</div>
+          <div>Nathan Ian Wilson</div>
+        </div>
+
+        <div class="info-row">
+          <div class="label">AAMC ID</div>
+          <div>16698210</div>
+        </div>
+
+        <div class="info-row">
+          <div class="label">Date of Birth</div>
+          <div>Aug 3, 2004</div>
+        </div>
+
+        <div class="info-row">
+          <div class="label">Gender</div>
+          <div>Man</div>
+        </div>
+      </div>
+
+      <div class="card">
+        <h2>Latest Exam</h2>
+
+        <div class="exam-box">
+          <div class="exam-head">MCAT</div>
+
+          <div class="exam-body">
+            <div class="exam-row">
+              <div class="label">Exam Date</div>
+              <div>May 8, 2026</div>
+            </div>
+
+            <div class="exam-row">
+              <div class="label">Score Release Date</div>
+              <div>June 15, 2026</div>
+            </div>
+
+            <div class="exam-row">
+              <div class="label">Status</div>
+              <div class="green">Score Available</div>
+            </div>
+
+            <div class="actions">
+              <a class="action-link" href="#">Share Scores</a>
+
+              <a href="score.png" target="_blank">
+                <button>View Score</button>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
 
-    <div class="info-row">
-        <div class="label">Date of Birth</div>
-        <div>Aug 3, 2004</div>
+    <div class="card contact">
+      <h2>Contact Us</h2>
+      <div class="blue-strip">MCAT</div>
     </div>
 
-    <div class="info-row">
-        <div class="label">Gender</div>
-        <div>Man</div>
+    <div class="disclaimer">
+      Mock educational page only. Not affiliated with or endorsed by any official testing organization.
     </div>
-</div>
+  </div>
+
+</body>
+</html>
